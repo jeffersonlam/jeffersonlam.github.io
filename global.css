@@ -139,7 +139,7 @@ footer{
   transition: all 0.1s;
 }
 .block:hover:before{
-  background-color: rgba(255,255,255, 0.3);
+  background-color: rgba(255,255,255, 0.5);
 }
 
 html, body{ 
@@ -191,6 +191,15 @@ footer a:visited{
   -o-background-size: cover;
   background-size: cover;
 }
+#fifty-two{
+  background-image: url(img/52.jpg); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 a{
   text-decoration: none;
   color: black;
