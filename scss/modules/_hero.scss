@@ -1,7 +1,9 @@
 .hero .content {
   h1 {
     padding: 5px 0;
-    // font-weight: 400;
-    // letter-spacing: 5px;
+    @media (max-width: 600px){
+      font-size: 2.5em;
+      line-height: 46px;
+    }
   }
 }

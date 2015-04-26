@@ -29,7 +29,12 @@ $secondary-font : 'Georgia';
     background-color: $black;
     color: $white;
   }
-  background-image: url(../img/texture2.png);
+  background-image: url(../img/texture4.png);
+  h6{
+    text-indent: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 footer {

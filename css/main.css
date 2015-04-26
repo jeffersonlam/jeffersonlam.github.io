@@ -69,7 +69,7 @@ section, footer {
   padding: 70px 50px;
   min-height: 250px;
   transition: padding 0.3s; }
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     section, footer {
       padding: 40px 25px; } }
   section .content, footer .content {
@@ -115,6 +115,10 @@ h6 .highlight-bg {
 
 .hero .content h1 {
   padding: 5px 0; }
+  @media (max-width: 600px) {
+    .hero .content h1 {
+      font-size: 2.5em;
+      line-height: 46px; } }
 
 footer {
   font-weight: 100;
@@ -134,12 +138,14 @@ footer {
     margin: 0 6px;
     font-size: 1.7em; }
   @media (max-width: 700px) {
-    footer .row {
-      display: inline-block; }
-    footer .url {
-      display: none; }
-    footer .content {
-      text-align: center; } }
+    footer {
+      padding-top: 80px; }
+      footer .row {
+        display: inline-block; }
+      footer .url {
+        display: none; }
+      footer .content {
+        text-align: center; } }
 
 ::selection {
   background: #5AF;
@@ -155,10 +161,14 @@ footer {
 .about {
   font-family: 'Georgia';
   background-color: #FFF;
-  background-image: url(../img/texture2.png); }
+  background-image: url(../img/texture4.png); }
   .about .highlight-bg {
     background-color: #252324;
     color: #FFF; }
+  .about h6 {
+    text-indent: 20px;
+    text-align: justify;
+    text-justify: inter-word; }
 
 footer {
   font-family: 'Helvetica Neue';
