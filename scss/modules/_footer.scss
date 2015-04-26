@@ -3,36 +3,41 @@ footer {
   font-weight: 100;
   letter-spacing: 1px;
 
-  .content{
+  .content {
     p {
-      margin: 10px 0px;
+      margin: 10px 0;
     }
+
     a {
-      margin: 7px 0px;
+      margin: 7px 0;
       display: inline-block;
       width: 280px;
-      span{
+      span {
         vertical-align: middle;
       }
+
       @media (max-width: 700px){
-        & {
-          width: auto;
-        }
+        width: auto;
       }
     }
+
     .icon {
-      margin-right: 6px;
       font-size: 1.7em;
+      margin-right: 6px;
     }
   }
+
   @media (max-width: 700px){
     padding-top: 80px;
+
     .row {
       display: inline-block;
     }
+
     .url {
       display: none;
     }
+
     .content {
       text-align: center;
     }
