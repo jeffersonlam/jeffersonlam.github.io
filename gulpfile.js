@@ -13,7 +13,6 @@ var reload = browserSync.reload;
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var plumber = require('gulp-plumber');
-var deploy = require('gulp-gh-pages');
 var notify = require('gulp-notify');
 
 
@@ -32,24 +31,19 @@ gulp.task('scss', function() {
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(rename('main.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
     .pipe(reload({stream:true}))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: 'dist/'
+            baseDir: './'
         }
     });
-});
-
-gulp.task('deploy', function () {
-    return gulp.src('dist/**/*')
-        .pipe(deploy());
 });
 
 gulp.task('js', function() {
@@ -57,7 +51,7 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(concat('all.min.js'))
     .pipe(reload({stream:true}))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('./js'));
 });
 
 gulp.task('scss-lint', function() {
@@ -67,7 +61,7 @@ gulp.task('scss-lint', function() {
 
 gulp.task('html', function() {
   gulp.src('./*.html')
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('./'))
     .pipe(reload({stream:true}));
 });
 
@@ -91,7 +85,7 @@ gulp.task('imgmin', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('./img/min'));
 });
 
 gulp.task('default', ['scss-lint', 'browser-sync', 'js', 'imgmin', 'html', 'scss', 'watch']);
