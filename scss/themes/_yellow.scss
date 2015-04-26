@@ -1,0 +1,40 @@
+$primary-clr : #FFE52B; //rgb(255, 229, 43)
+$secondary-clr : #37A2BC;
+$third-clr: #7A7E6D;
+$black : #252324;
+$white: #FFF;
+$selection-clr: #5AF;
+
+$primary-font: 'Helvetica Neue';
+$secondary-font : 'Georgia';
+
+::selection {
+  background: $selection-clr;
+  color: $white;
+}
+
+.hero {
+  font-family: $primary-font;
+  background-color: $primary-clr;
+
+  .highlight-bg {
+    background-color: $black;
+    color: $primary-clr;
+  }
+}
+
+.about {
+  font-family: $secondary-font;
+  .highlight-bg {
+    background-color: $third-clr;
+    color: $white;
+  }
+}
+
+footer {
+  font-family: $primary-font;
+  background-color: $black;
+  color: $white;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
