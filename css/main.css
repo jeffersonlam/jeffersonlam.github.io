@@ -135,7 +135,7 @@ footer {
       footer .content a {
         width: auto; } }
   footer .content .icon {
-    margin: 0 6px;
+    margin-right: 6px;
     font-size: 1.7em; }
   @media (max-width: 700px) {
     footer {
@@ -167,8 +167,7 @@ footer {
     color: #FFF; }
   .about h6 {
     text-indent: 20px;
-    text-align: justify;
-    text-justify: inter-word; }
+    hyphens: auto; }
 
 footer {
   font-family: 'Helvetica Neue';

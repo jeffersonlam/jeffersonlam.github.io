@@ -32,8 +32,9 @@ $secondary-font : 'Georgia';
   background-image: url(../img/texture4.png);
   h6{
     text-indent: 20px;
-    text-align: justify;
-    text-justify: inter-word;
+    // text-align: justify;
+    // text-justify: inter-word;
+    hyphens: auto;
   }
 }
 
