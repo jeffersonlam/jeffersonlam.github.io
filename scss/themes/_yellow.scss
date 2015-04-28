@@ -21,6 +21,7 @@ body, html {
 
 .container {
   -webkit-animation: body-fade-in 0.4s 0.1s forwards;
+  animation: body-fade-in 0.4s 0.1s forwards;
   opacity: 0;
 }
 
