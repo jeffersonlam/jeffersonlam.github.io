@@ -1,4 +1,5 @@
-$primary-clr : #FFE52B;
+//rgb(255,222,89)
+$primary-clr : #FFDE59;
 $secondary-clr : #37A2BC;
 $selection-clr: #5AF;
 $black : #252324;
@@ -7,11 +8,48 @@ $white: #FFF;
 $primary-font: 'Helvetica Neue';
 $secondary-font : 'Georgia';
 
+
+// foundation
 ::selection {
   background: $selection-clr;
   color: $white;
 }
 
+body, html {
+  background-color: $black;
+}
+
+.container {
+  -webkit-animation: body-fade-in 0.4s 0.1s forwards;
+  opacity: 0;
+}
+
+// hamburger
+.hamburger {
+  background-color: black;
+}
+
+// nav
+nav {
+  background-color: rgba(255,255,255, 0.8);
+  font-family: $primary-font;
+
+  a {
+    color: $black;
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover {
+      color: $secondary-clr;
+    }
+  }
+}
+
+//hero
 .hero {
   background-color: $primary-clr;
   font-family: $primary-font;
@@ -22,6 +60,7 @@ $secondary-font : 'Georgia';
   }
 }
 
+// sub sections
 .about {
   background-color: $white;
   background-image: url('../img/texture4.png');
@@ -39,6 +78,7 @@ $secondary-font : 'Georgia';
   }
 }
 
+// footer
 footer {
   font-family: $primary-font;
   background-color: $black;
@@ -57,4 +97,20 @@ footer {
       color: $secondary-clr;
     }
   }
+}
+
+// animations
+@-webkit-keyframes body-fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes body-fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.body-fade-in {
+  -webkit-animation-name: body-fade-in;
+          animation-name: body-fade-in;
 }

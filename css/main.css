@@ -91,24 +91,62 @@ html, body {
   content: "\eac8"; }
 
 .container {
-  min-height: 100%;
   height: 100%;
-  position: relative; }
+  min-height: 100%; }
 
 section, footer {
-  width: 100%;
-  padding: 70px 50px;
   min-height: 250px;
-  transition: padding 0.3s; }
+  padding: 70px 50px;
+  transition: padding .3s;
+  width: 100%; }
   @media (max-width: 600px) {
     section, footer {
       padding: 40px 15px; } }
   section .content, footer .content {
-    max-width: 850px;
+    max-width: 725px;
     margin: 0 auto; }
 
-span.highlight-bg {
+.highlight-bg {
   padding: 0 1%; }
+
+.hamburger {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5000;
+  padding: 3px 5px 0 5px; }
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    border-radius: 2px; }
+  .hamburger:hover {
+    cursor: pointer;
+    background-color: #fff; }
+    .hamburger:hover div {
+      background-color: black; }
+
+nav {
+  text-align: right;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000; }
+  nav .content {
+    margin: 0 auto;
+    max-width: 725px; }
+  nav a {
+    text-align: center;
+    width: 80px;
+    display: inline-block; }
 
 .hero .content h1 {
   padding: 5px 0; }
@@ -152,12 +190,34 @@ footer {
   background: #5AF;
   color: #FFF; }
 
+body, html {
+  background-color: #252324; }
+
+.container {
+  -webkit-animation: body-fade-in 0.4s 0.1s forwards;
+  opacity: 0; }
+
+.hamburger {
+  background-color: black; }
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Helvetica Neue'; }
+  nav a {
+    color: #252324;
+    text-decoration: none;
+    transition: color .1s ease-in-out; }
+    nav a:visited {
+      color: #252324; }
+    nav a:hover {
+      color: #37A2BC; }
+
 .hero {
-  background-color: #FFE52B;
+  background-color: #FFDE59;
   font-family: 'Helvetica Neue'; }
   .hero .highlight-bg {
     background-color: #252324;
-    color: #FFE52B; }
+    color: #FFDE59; }
 
 .about {
   background-color: #FFF;
@@ -181,3 +241,21 @@ footer {
       color: #FFF; }
     footer a:hover {
       color: #37A2BC; }
+
+@-webkit-keyframes body-fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes body-fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.body-fade-in {
+  -webkit-animation-name: body-fade-in;
+  animation-name: body-fade-in; }

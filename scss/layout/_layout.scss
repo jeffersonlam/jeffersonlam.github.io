@@ -1,24 +1,23 @@
 .container {
-  min-height: 100%;
   height: 100%;
-  position: relative;
+  min-height: 100%;
 }
 
 section, footer {
-  width: 100%;
-  padding: 70px 50px;
   min-height: 250px;
-  transition: padding 0.3s;
+  padding: 70px 50px;
+  transition: padding .3s;
+  width: 100%;
   @media (max-width: 600px){
     padding: 40px 15px;
   }
 
   .content {
-    max-width: 850px;
-    margin: 0 auto
+    max-width: 725px;
+    margin: 0 auto;
   }
 }
 
-span.highlight-bg {
+.highlight-bg {
   padding: 0 1%;
 }
