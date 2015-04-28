@@ -1,9 +1,8 @@
-$primary-clr : #FFE52B; //rgb(255, 229, 43)
+$primary-clr : #FFE52B;
 $secondary-clr : #37A2BC;
-// $third-clr: #676A5D;
+$selection-clr: #5AF;
 $black : #252324;
 $white: #FFF;
-$selection-clr: #5AF;
 
 $primary-font: 'Helvetica Neue';
 $secondary-font : 'Georgia';
@@ -14,8 +13,9 @@ $secondary-font : 'Georgia';
 }
 
 .hero {
-  font-family: $primary-font;
   background-color: $primary-clr;
+  font-family: $primary-font;
+
   .highlight-bg {
     background-color: $black;
     color: $primary-clr;
@@ -23,18 +23,19 @@ $secondary-font : 'Georgia';
 }
 
 .about {
-  font-family: $secondary-font;
   background-color: $white;
+  background-image: url('../img/texture4.png');
+  font-family: $secondary-font;
+
   .highlight-bg {
     background-color: $black;
     color: $white;
   }
-  background-image: url(../img/texture4.png);
-  h6{
+
+  h6 {
     text-indent: 20px;
     // text-align: justify;
     // text-justify: inter-word;
-    hyphens: auto;
   }
 }
 
@@ -44,9 +45,10 @@ footer {
   color: $white;
 
   a {
-    text-decoration: none;
-    transition: color 0.1s ease-in-out;
     color: $white;
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+
     &:visited {
       color: $white;
     }

@@ -56,36 +56,10 @@ p {
 html, body {
   height: 100%; }
 
-h1, h2, h3, h4, h5, h6, p {
-  widows: 3;
-  orphans: 3; }
-
-.container {
-  min-height: 100%;
-  height: 100%;
-  position: relative; }
-
-section, footer {
-  padding: 70px 50px;
-  min-height: 250px;
-  transition: padding 0.3s; }
-  @media (max-width: 600px) {
-    section, footer {
-      padding: 40px 15px; } }
-  section .content, footer .content {
-    max-width: 850px;
-    margin: 0 auto; }
-
-h1 .highlight-bg {
-  padding: 0 5px; }
-
-h6 .highlight-bg {
-  padding: 0 2px; }
-
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?7vogbm');
-  src: url('fonts/icomoon.eot?#iefix7vogbm') format('embedded-opentype'), url('fonts/icomoon.woff?7vogbm') format('woff'), url('fonts/icomoon.ttf?7vogbm') format('truetype'), url('fonts/icomoon.svg?7vogbm#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?qj2odw');
+  src: url('fonts/icomoon.eot?#iefixqj2odw') format('embedded-opentype'), url('fonts/icomoon.woff?qj2odw') format('woff'), url('fonts/icomoon.ttf?qj2odw') format('truetype'), url('fonts/icomoon.svg?qj2odw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -101,6 +75,9 @@ h6 .highlight-bg {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-envelop:before {
+  content: "\e945"; }
+
 .icon-twitter:before {
   content: "\ea91"; }
 
@@ -113,6 +90,26 @@ h6 .highlight-bg {
 .icon-linkedin:before {
   content: "\eac8"; }
 
+.container {
+  min-height: 100%;
+  height: 100%;
+  position: relative; }
+
+section, footer {
+  width: 100%;
+  padding: 70px 50px;
+  min-height: 250px;
+  transition: padding 0.3s; }
+  @media (max-width: 600px) {
+    section, footer {
+      padding: 40px 15px; } }
+  section .content, footer .content {
+    max-width: 850px;
+    margin: 0 auto; }
+
+span.highlight-bg {
+  padding: 0 1%; }
+
 .hero .content h1 {
   padding: 5px 0; }
   @media (max-width: 600px) {
@@ -122,61 +119,64 @@ h6 .highlight-bg {
 
 footer {
   font-weight: 100;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-size: 1em; }
+  footer .content .row {
+    margin: 0 0 8px; }
   footer .content p {
-    margin: 10px 0px; }
+    margin: 15px 0; }
   footer .content a {
-    margin: 7px 0px;
     display: inline-block;
     width: 280px; }
     footer .content a span {
       vertical-align: middle; }
-    @media (max-width: 700px) {
-      footer .content a {
-        width: auto; } }
   footer .content .icon {
-    margin-right: 6px;
-    font-size: 1.7em; }
-  @media (max-width: 700px) {
+    font-size: 1.5em;
+    margin-right: 3px; }
+  @media (max-width: 680px) {
     footer {
       padding-top: 80px; }
-      footer .row {
-        display: inline-block; }
-      footer .url {
-        display: none; }
       footer .content {
-        text-align: center; } }
+        text-align: center; }
+        footer .content .row {
+          display: inline-block; }
+          footer .content .row a {
+            width: auto; }
+        footer .content .url {
+          display: none; }
+        footer .content .icon {
+          font-size: 1.6em;
+          margin: 0 10px; } }
 
 ::selection {
   background: #5AF;
   color: #FFF; }
 
 .hero {
-  font-family: 'Helvetica Neue';
-  background-color: #FFE52B; }
+  background-color: #FFE52B;
+  font-family: 'Helvetica Neue'; }
   .hero .highlight-bg {
     background-color: #252324;
     color: #FFE52B; }
 
 .about {
-  font-family: 'Georgia';
   background-color: #FFF;
-  background-image: url(../img/texture4.png); }
+  background-image: url('../img/texture4.png');
+  font-family: 'Georgia'; }
   .about .highlight-bg {
     background-color: #252324;
     color: #FFF; }
   .about h6 {
-    text-indent: 20px;
-    hyphens: auto; }
+    text-indent: 20px; }
 
 footer {
   font-family: 'Helvetica Neue';
   background-color: #252324;
   color: #FFF; }
   footer a {
+    color: #FFF;
     text-decoration: none;
-    transition: color 0.1s ease-in-out;
-    color: #FFF; }
+    transition: color .1s ease-in-out; }
     footer a:visited {
       color: #FFF; }
     footer a:hover {
