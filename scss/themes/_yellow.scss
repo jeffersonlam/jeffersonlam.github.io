@@ -32,8 +32,10 @@ body, html {
 
 // nav
 nav {
-  background-color: rgba(255,255,255, 0.8);
+  background-color: $primary-clr;
   font-family: $primary-font;
+  font-weight: 200;
+  letter-spacing: 1px;
 
   a {
     color: $black;
@@ -52,6 +54,7 @@ nav {
 
 //hero
 .hero {
+  color: $black;
   background-color: $primary-clr;
   font-family: $primary-font;
 
@@ -63,6 +66,7 @@ nav {
 
 // sub sections
 .about {
+  color: $black;
   background-color: $white;
   background-image: url('../img/texture4.png');
   font-family: $secondary-font;

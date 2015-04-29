@@ -1,0 +1,28 @@
+$nav-height: 40px;
+
+nav {
+  text-align: right;
+  height: $nav-height;
+  width: 100%;
+  line-height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000;
+
+  .content {
+    margin: 0 auto;
+    max-width: 725px;
+  }
+  a {
+    text-align: center;
+    width: 80px;
+    display: inline-block;
+  }
+
+  & + .container{
+    margin-top: $nav-height;
+  }
+}

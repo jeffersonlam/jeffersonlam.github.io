@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, footer, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -7,7 +7,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, footer {
   display: block; }
 
 body {
@@ -90,12 +90,15 @@ html, body {
 .icon-linkedin:before {
   content: "\eac8"; }
 
+nav {
+  padding: 0 50px; }
+
 .container {
   height: 100%;
   min-height: 100%; }
 
 section, footer {
-  min-height: 250px;
+  min-height: 300px;
   padding: 70px 50px;
   transition: padding .3s;
   width: 100%; }
@@ -106,47 +109,66 @@ section, footer {
     max-width: 725px;
     margin: 0 auto; }
 
+footer {
+  min-height: 250px; }
+
 .highlight-bg {
   padding: 0 1%; }
 
 .hamburger {
-  width: 35px;
   height: 35px;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 5000;
-  padding: 3px 5px 0 5px; }
+  padding: 3px 5px 0;
+  top: 10px;
+  left: 10px;
+  width: 35px;
+  z-index: 5000; }
   .hamburger div {
-    width: 100%;
+    background-color: #FFF;
+    border-radius: 2px;
     height: 3px;
-    background-color: #fff;
     margin: 5px auto;
-    border-radius: 2px; }
+    width: 100%; }
   .hamburger:hover {
-    cursor: pointer;
-    background-color: #fff; }
+    background-color: #FFF;
+    cursor: pointer; }
     .hamburger:hover div {
       background-color: black; }
 
 nav {
   text-align: right;
-  height: 40px;
   width: 100%;
-  line-height: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 5000; }
   nav .content {
+    line-height: 30px;
+    height: 30px;
     margin: 0 auto;
-    max-width: 725px; }
-  nav a {
-    text-align: center;
-    width: 80px;
-    display: inline-block; }
+    max-width: 725px;
+    transition: padding .3s; }
+    @media (max-width: 480px) {
+      nav .content {
+        padding: 0; }
+        nav .content * {
+          display: none; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      nav .content {
+        padding: 30px 0; } }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      nav .content {
+        padding: 45px 0; } }
+    @media (min-width: 1200px) {
+      nav .content {
+        padding: 60px 0; } }
+  nav li {
+    display: inline-block;
+    text-align: center; }
+    nav li:not(:last-child) {
+      margin-right: 2em; }
+    nav li a {
+      height: 33px;
+      display: inline-block; }
+    nav li.active a {
+      border-bottom: 2px solid black; }
 
 .hero .content h1 {
   padding: 5px 0; }
@@ -154,6 +176,12 @@ nav {
     .hero .content h1 {
       font-size: 2.5em;
       line-height: 46px; } }
+
+.hero {
+  padding-top: 0; }
+  @media (max-width: 480px) {
+    .hero {
+      padding-top: 20px; } }
 
 footer {
   font-weight: 100;
@@ -202,8 +230,10 @@ body, html {
   background-color: black; }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.8);
-  font-family: 'Helvetica Neue'; }
+  background-color: #FFDE59;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  letter-spacing: 1px; }
   nav a {
     color: #252324;
     text-decoration: none;
@@ -214,6 +244,7 @@ nav {
       color: #37A2BC; }
 
 .hero {
+  color: #252324;
   background-color: #FFDE59;
   font-family: 'Helvetica Neue'; }
   .hero .highlight-bg {
@@ -221,6 +252,7 @@ nav {
     color: #FFDE59; }
 
 .about {
+  color: #252324;
   background-color: #FFF;
   background-image: url('../img/texture4.png');
   font-family: 'Georgia'; }
