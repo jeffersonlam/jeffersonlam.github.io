@@ -1,24 +1,23 @@
-.hamburger {
+.hamburger{
+  width: 35px;
   height: 35px;
   position: fixed;
-  padding: 3px 5px 0;
-  top: 10px;
-  left: 10px;
-  width: 35px;
+  top: 0px;
+  left: 0px;
   z-index: 5000;
+  padding: 3px 5px 0 5px;
 
   div {
-    background-color: #FFF;
-    border-radius: 2px;
-    height: 3px;
-    margin: 5px auto;
     width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    border-radius: 2px;
   }
 
-  &:hover {
-    background-color: #FFF;
+  &:hover{
     cursor: pointer;
-
+    background-color: #fff;
     div {
       background-color: black;
     }

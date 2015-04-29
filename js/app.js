@@ -10,15 +10,4 @@
     text.innerHTML = email;
     document.getElementById(anchorId).href = 'mailto:' + email;
   }
-
-  function nav() {
-    var nav = document.getElementById('nav')
-    if (document.body.scrollTop > 100) {
-
-    }
-    else {
-        $('#slider').stop().animate({"margin-left": '-200'});
-    }
-  }
-
 }());
