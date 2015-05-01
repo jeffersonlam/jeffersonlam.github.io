@@ -96,38 +96,19 @@ html, body {
 
 section, footer {
   min-height: 250px;
-  padding: 70px 50px;
+  padding: 80px 50px;
   transition: padding .3s;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   @media (max-width: 600px) {
     section, footer {
-      padding: 40px 15px; } }
+      padding: 70px 20px; } }
   section .content, footer .content {
     max-width: 725px;
     margin: 0 auto; }
 
 .highlight-bg {
   padding: 0 1%; }
-
-.hamburger {
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 5000;
-  padding: 3px 5px 0 5px; }
-  .hamburger div {
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px auto;
-    border-radius: 2px; }
-  .hamburger:hover {
-    cursor: pointer;
-    background-color: #fff; }
-    .hamburger:hover div {
-      background-color: black; }
 
 nav {
   text-align: right;
@@ -186,12 +167,37 @@ footer {
           font-size: 1.6em;
           margin: 0 10px; } }
 
+.icon {
+  bottom: 0px;
+  left: 50%;
+  margin-left: -40px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  z-index: 5000; }
+  .icon:after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 40px;
+    width: 0;
+    height: 0;
+    border: 40px solid transparent; }
+  .icon:hover {
+    cursor: pointer; }
+
 ::selection {
   background: #5AF;
   color: #FFF; }
 
 body, html {
   background-color: #252324; }
+
+a {
+  color: inherit; }
+  a:visited {
+    color: inherit; }
 
 .container {
   -webkit-animation: body-fade-in 0.4s 0.1s forwards;
@@ -200,6 +206,9 @@ body, html {
 
 .hamburger {
   background-color: black; }
+
+.highlight-bg {
+  transition: all 0.3s; }
 
 nav {
   background-color: rgba(255, 255, 255, 0.8);
@@ -215,20 +224,38 @@ nav {
 
 .hero {
   background-color: #FFDE59;
-  font-family: 'Helvetica Neue'; }
+  font-family: 'Helvetica Neue';
+  color: #252324;
+  transition: all 0.3s; }
   .hero .highlight-bg {
     background-color: #252324;
     color: #FFDE59; }
+  .hero.alternate {
+    background-color: #252324;
+    color: #FFDE59; }
+    .hero.alternate .highlight-bg {
+      background-color: #FFDE59;
+      color: #252324; }
 
 .about {
+  color: #252324;
   background-color: #FFF;
   background-image: url('../img/texture4.png');
-  font-family: 'Georgia'; }
+  background-position: 50%;
+  font-family: 'Georgia';
+  transition: all 0.3s; }
   .about .highlight-bg {
     background-color: #252324;
     color: #FFF; }
   .about h6 {
-    text-indent: 20px; }
+    text-indent: 20px;
+    margin-bottom: 15px; }
+  .about.alternate {
+    background-color: #252324;
+    color: #FFF; }
+    .about.alternate .highlight-bg {
+      background-color: #FFF;
+      color: #252324; }
 
 footer {
   font-family: 'Helvetica Neue';
@@ -260,3 +287,12 @@ footer {
 .body-fade-in {
   -webkit-animation-name: body-fade-in;
   animation-name: body-fade-in; }
+
+.icon {
+  border-bottom-color: rgba(90, 90, 90, 0.8); }
+  .icon:after {
+    border-top-color: rgba(130, 130, 130, 0.8); }
+  .icon:hover {
+    border-bottom-color: rgba(120, 120, 120, 0.8); }
+    .icon:hover:after {
+      border-top-color: rgba(160, 160, 160, 0.8); }

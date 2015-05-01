@@ -19,6 +19,15 @@ body, html {
   background-color: $black;
 }
 
+a {
+  color: inherit;
+  // text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
 .container {
   -webkit-animation: body-fade-in 0.4s 0.1s forwards;
   animation: body-fade-in 0.4s 0.1s forwards;
@@ -28,6 +37,10 @@ body, html {
 // hamburger
 .hamburger {
   background-color: black;
+}
+
+.highlight-bg{
+  transition: all 0.3s;
 }
 
 // nav
@@ -54,28 +67,78 @@ nav {
 .hero {
   background-color: $primary-clr;
   font-family: $primary-font;
+  color: $black;
+  transition: all 0.3s;
 
   .highlight-bg {
     background-color: $black;
     color: $primary-clr;
+
+    // &:hover{
+      // background-color: $white;
+      // color: $black;
+      // cursor: pointer;
+    // }
+  }
+
+  &.alternate {
+    background-color: $black;
+    color: $primary-clr;
+
+    .highlight-bg{
+      background-color: $primary-clr;
+      color: $black;
+
+      // &:hover{
+      //   background-color: $white;
+      //   color: $black;
+      //   cursor: pointer;
+      // }
+    }
   }
 }
 
 // sub sections
 .about {
+  color: $black;
   background-color: $white;
   background-image: url('../img/texture4.png');
+  background-position: 50%;
   font-family: $secondary-font;
+  transition: all 0.3s;
 
   .highlight-bg {
     background-color: $black;
     color: $white;
+
+    // &:hover{
+      // background-color: $primary-clr;
+      // color: $black;
+      // cursor: pointer;
+    // }
   }
 
   h6 {
     text-indent: 20px;
+    margin-bottom: 15px;
     // text-align: justify;
     // text-justify: inter-word;
+  }
+
+  &.alternate {
+    background-color: $black;
+    color: $white;
+
+    .highlight-bg{
+      background-color: $white;
+      color: $black;
+
+      // &:hover{
+        // background-color: $primary-clr;
+        // color: $black;
+        // cursor: pointer;
+      // }
+    }
   }
 }
 
@@ -98,6 +161,7 @@ footer {
       color: $secondary-clr;
     }
   }
+
 }
 
 // animations
@@ -114,4 +178,20 @@ footer {
 .body-fade-in {
   -webkit-animation-name: body-fade-in;
           animation-name: body-fade-in;
+}
+
+.icon {
+  border-bottom-color: rgba(90,90,90,0.8);
+
+  &:after{
+    border-top-color: rgba(130,130,130,0.8);
+  }
+
+  &:hover{
+    border-bottom-color: rgba(120,120,120,0.8);
+
+    &:after{
+      border-top-color: rgba(160,160,160,0.8);
+    }
+  }
 }

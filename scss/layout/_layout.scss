@@ -5,11 +5,12 @@
 
 section, footer {
   min-height: 250px;
-  padding: 70px 50px;
+  padding: 80px 50px;
   transition: padding .3s;
   width: 100%;
+  position: relative;
   @media (max-width: 600px){
-    padding: 40px 15px;
+    padding: 70px 20px;
   }
 
   .content {
