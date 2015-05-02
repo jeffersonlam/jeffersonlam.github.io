@@ -180,18 +180,18 @@ footer {
           animation-name: body-fade-in;
 }
 
-.icon {
-  border-bottom-color: rgba(90,90,90,0.8);
+.logo {
+  border-bottom-color: rgba(90,90,90,.8);
 
-  &:after{
-    border-top-color: rgba(130,130,130,0.8);
+  &:after {
+    border-top-color: rgba(130,130,130,.8);
   }
 
-  &:hover{
-    border-bottom-color: rgba(120,120,120,0.8);
+  &:hover {
+    border-bottom-color: rgba(120,120,120,.8);
 
-    &:after{
-      border-top-color: rgba(160,160,160,0.8);
+    &:after {
+      border-top-color: rgba(160,160,160,.8);
     }
   }
 }
