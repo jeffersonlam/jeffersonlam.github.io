@@ -200,19 +200,19 @@ a {
     color: inherit; }
 
 .container {
-  -webkit-animation: body-fade-in 0.4s 0.1s forwards;
-  animation: body-fade-in 0.4s 0.1s forwards;
+  -webkit-animation: body-fade-in .4s .1s forwards;
+  animation: body-fade-in .4s .1s forwards;
   opacity: 0; }
 
 .hamburger {
-  background-color: black; }
+  background-color: #252324; }
 
 .highlight-bg {
-  transition: all 0.3s; }
+  transition: all .3s; }
 
 nav {
   background-color: rgba(255, 255, 255, 0.8);
-  font-family: 'Helvetica Neue'; }
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; }
   nav a {
     color: #252324;
     text-decoration: none;
@@ -224,9 +224,9 @@ nav {
 
 .hero {
   background-color: #FFDE59;
-  font-family: 'Helvetica Neue';
   color: #252324;
-  transition: all 0.3s; }
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  transition: all .3s; }
   .hero .highlight-bg {
     background-color: #252324;
     color: #FFDE59; }
@@ -238,18 +238,18 @@ nav {
       color: #252324; }
 
 .about {
-  color: #252324;
   background-color: #FFF;
   background-image: url('../img/texture4.png');
   background-position: 50%;
+  color: #252324;
   font-family: 'Georgia';
-  transition: all 0.3s; }
+  transition: all .3s; }
   .about .highlight-bg {
     background-color: #252324;
     color: #FFF; }
   .about h6 {
-    text-indent: 20px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    text-indent: 20px; }
   .about.alternate {
     background-color: #252324;
     color: #FFF; }
@@ -258,9 +258,9 @@ nav {
       color: #252324; }
 
 footer {
-  font-family: 'Helvetica Neue';
   background-color: #252324;
-  color: #FFF; }
+  color: #FFF;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; }
   footer a {
     color: #FFF;
     text-decoration: none;

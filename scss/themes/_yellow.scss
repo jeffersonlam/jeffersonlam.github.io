@@ -5,7 +5,7 @@ $selection-clr: #5AF;
 $black : #252324;
 $white: #FFF;
 
-$primary-font: 'Helvetica Neue';
+$primary-font: 'Helvetica Neue', Helvetica, sans-serif;
 $secondary-font : 'Georgia';
 
 
@@ -29,23 +29,23 @@ a {
 }
 
 .container {
-  -webkit-animation: body-fade-in 0.4s 0.1s forwards;
-  animation: body-fade-in 0.4s 0.1s forwards;
+  -webkit-animation: body-fade-in .4s .1s forwards;
+  animation: body-fade-in .4s .1s forwards;
   opacity: 0;
 }
 
 // hamburger
 .hamburger {
-  background-color: black;
+  background-color: $black;
 }
 
-.highlight-bg{
-  transition: all 0.3s;
+.highlight-bg {
+  transition: all .3s;
 }
 
 // nav
 nav {
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255, 255, 255, .8);
   font-family: $primary-font;
 
   a {
@@ -66,9 +66,9 @@ nav {
 //hero
 .hero {
   background-color: $primary-clr;
-  font-family: $primary-font;
   color: $black;
-  transition: all 0.3s;
+  font-family: $primary-font;
+  transition: all .3s;
 
   .highlight-bg {
     background-color: $black;
@@ -85,7 +85,7 @@ nav {
     background-color: $black;
     color: $primary-clr;
 
-    .highlight-bg{
+    .highlight-bg {
       background-color: $primary-clr;
       color: $black;
 
@@ -100,12 +100,12 @@ nav {
 
 // sub sections
 .about {
-  color: $black;
   background-color: $white;
   background-image: url('../img/texture4.png');
   background-position: 50%;
+  color: $black;
   font-family: $secondary-font;
-  transition: all 0.3s;
+  transition: all .3s;
 
   .highlight-bg {
     background-color: $black;
@@ -119,8 +119,8 @@ nav {
   }
 
   h6 {
-    text-indent: 20px;
     margin-bottom: 15px;
+    text-indent: 20px;
     // text-align: justify;
     // text-justify: inter-word;
   }
@@ -129,7 +129,7 @@ nav {
     background-color: $black;
     color: $white;
 
-    .highlight-bg{
+    .highlight-bg {
       background-color: $white;
       color: $black;
 
@@ -144,9 +144,9 @@ nav {
 
 // footer
 footer {
-  font-family: $primary-font;
   background-color: $black;
   color: $white;
+  font-family: $primary-font;
 
   a {
     color: $white;
@@ -177,21 +177,21 @@ footer {
 
 .body-fade-in {
   -webkit-animation-name: body-fade-in;
-          animation-name: body-fade-in;
+  animation-name: body-fade-in;
 }
 
 .logo {
-  border-bottom-color: rgba(90,90,90,.8);
+  border-bottom-color: rgba(90, 90, 90, .8);
 
   &:after {
-    border-top-color: rgba(130,130,130,.8);
+    border-top-color: rgba(130, 130, 130, .8);
   }
 
   &:hover {
-    border-bottom-color: rgba(120,120,120,.8);
+    border-bottom-color: rgba(120, 120, 120, .8);
 
     &:after {
-      border-top-color: rgba(160,160,160,.8);
+      border-top-color: rgba(160, 160, 160, .8);
     }
   }
 }
