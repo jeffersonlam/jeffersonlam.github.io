@@ -3,17 +3,76 @@
   min-height: 100%;
 }
 
-section, footer {
-  min-height: 250px;
-  padding: 80px 50px;
-  transition: padding .3s;
-  width: 100%;
+section {
+  display: flex;
+  display: -webkit-flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  height: 90vh;
+  min-height: 30em;
+  // overflow: hidden;
   position: relative;
+  text-align: left;
+  padding: 100px 40px;
+
+  transition: padding .3s;
   @media (max-width: 600px){
     padding: 70px 20px;
   }
 
   .content {
+    display: block;
+    width: 100%;
+    max-width: 725px;
+    margin: 0 auto;
+  }
+
+  .portfolio {
+    margin-top: 50px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 25px 38px;
+      font-size: 1.3em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  display: -webkit-flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  min-height: 25em;
+  padding: 100px 40px;
+  transition: padding .3s;
+ 
+  @media (max-width: 600px){
+    padding: 70px 20px;
+  }
+
+  .content {
+    display: block;
+    width: 100%;
     max-width: 725px;
     margin: 0 auto;
   }

@@ -97,16 +97,63 @@ html, body {
   height: 100%;
   min-height: 100%; }
 
-section, footer {
-  min-height: 250px;
-  padding: 80px 50px;
-  transition: padding .3s;
-  width: 100%;
-  position: relative; }
+section {
+  display: flex;
+  display: -webkit-flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  height: 90vh;
+  min-height: 30em;
+  position: relative;
+  text-align: left;
+  padding: 100px 40px;
+  transition: padding .3s; }
   @media (max-width: 600px) {
-    section, footer {
+    section {
       padding: 70px 20px; } }
-  section .content, footer .content {
+  section .content {
+    display: block;
+    width: 100%;
+    max-width: 725px;
+    margin: 0 auto; }
+  section .portfolio {
+    margin-top: 50px;
+    text-align: center; }
+    section .portfolio a {
+      display: inline-block;
+      padding: 25px 38px;
+      font-size: 1.3em; }
+      section .portfolio a:hover {
+        cursor: pointer; }
+
+footer {
+  display: flex;
+  display: -webkit-flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  min-height: 25em;
+  padding: 100px 40px;
+  transition: padding .3s; }
+  @media (max-width: 600px) {
+    footer {
+      padding: 70px 20px; } }
+  footer .content {
+    display: block;
+    width: 100%;
     max-width: 725px;
     margin: 0 auto; }
 
@@ -213,18 +260,6 @@ a {
 .highlight-bg {
   transition: all .3s; }
 
-nav {
-  background-color: rgba(255, 255, 255, 0.8);
-  font-family: 'Helvetica Neue', Helvetica, sans-serif; }
-  nav a {
-    color: #252324;
-    text-decoration: none;
-    transition: color .1s ease-in-out; }
-    nav a:visited {
-      color: #252324; }
-    nav a:hover {
-      color: #37A2BC; }
-
 .hero {
   background-color: #FFDE59;
   color: #252324;
@@ -250,6 +285,13 @@ nav {
   .about .highlight-bg {
     background-color: #252324;
     color: #FFF; }
+  .about .portfolio a {
+    border: 2px solid #252324;
+    transition: background-color .1s, border .1s; }
+    .about .portfolio a:hover {
+      background-color: #252324;
+      color: #FFF;
+      transition: all .3s; }
   .about h6 {
     margin-bottom: 15px;
     text-indent: 20px; }
@@ -259,6 +301,11 @@ nav {
     .about.alternate .highlight-bg {
       background-color: #FFF;
       color: #252324; }
+    .about.alternate .portfolio a {
+      border-color: #FFF; }
+      .about.alternate .portfolio a:hover {
+        background-color: #FFF;
+        color: #252324; }
 
 footer {
   background-color: #252324;
