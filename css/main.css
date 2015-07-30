@@ -190,34 +190,17 @@ nav {
 
 footer {
   font-weight: 100;
-  letter-spacing: 1px;
-  font-size: 1em; }
-  footer .content .row {
-    margin: 0 0 8px; }
-  footer .content p {
-    margin: 15px 0; }
-  footer .content a {
-    display: inline-block;
-    width: 280px; }
-    footer .content a span {
-      vertical-align: middle; }
-  footer .content .icon {
-    font-size: 1.5em;
-    margin-right: 3px; }
-  @media (max-width: 680px) {
-    footer {
-      padding-top: 80px; }
-      footer .content {
-        text-align: center; }
-        footer .content .row {
-          display: inline-block; }
-          footer .content .row a {
-            width: auto; }
-        footer .content .url {
-          display: none; }
-        footer .content .icon {
-          font-size: 1.6em;
-          margin: 0 10px; } }
+  font-size: 1.1em;
+  letter-spacing: 1px; }
+  footer .content {
+    text-align: center; }
+    footer .content p {
+      margin: 15px 0; }
+    footer .content a {
+      display: inline-block; }
+    footer .content .icon {
+      font-size: 1.6em;
+      margin: 0 10px; }
 
 .logo {
   bottom: 0;

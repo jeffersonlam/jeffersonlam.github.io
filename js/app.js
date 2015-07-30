@@ -3,12 +3,10 @@
 //This code executes on load
 (function(){
   console.log('Hello, developer!');
-  createEmailLink(['jefferson','w','lam','@','gmail','.','com'], 'email-text', 'email-link');
+  createEmailLink(['jefferson','w','lam','@','gmail','.','com'], 'email-link');
 
-  function createEmailLink(array, textId, anchorId){
-    var text = document.getElementById(textId);
+  function createEmailLink(array, anchorId){
     var email = array.join('');
-    text.innerHTML = email;
     document.getElementById(anchorId).href = 'mailto:' + email;
   }
 }());

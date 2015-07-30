@@ -1,51 +1,22 @@
 footer {
   font-weight: 100;
+  font-size: 1.1em;
   letter-spacing: 1px;
-  font-size: 1em;
 
   .content {
-    .row {
-      margin: 0 0 8px;
-    }
+    text-align: center;
+
     p {
       margin: 15px 0;
     }
 
     a {
       display: inline-block;
-      width: 280px;
-
-      span {
-        vertical-align: middle;
-      }
     }
 
     .icon {
-      font-size: 1.5em;
-      margin-right: 3px;
-    }
-  }
-
-  @media (max-width: 680px){
-    padding-top: 80px;
-    .content {
-      text-align: center;
-
-      .row {
-        display: inline-block;
-        a {
-          width: auto;
-        }
-      }
-
-      .url {
-        display: none;
-      }
-
-      .icon {
-        font-size: 1.6em;
-        margin: 0 10px;
-      }
+      font-size: 1.6em;
+      margin: 0 10px;
     }
   }
 }
