@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-minify-css');
 var concat = require('gulp-concat');
@@ -28,6 +29,7 @@ gulp.task('scss', function() {
   return gulp.src('scss/main.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 2 versions']}))
     .pipe(rename('main.css'))
     .pipe(gulp.dest('./css'))
     .pipe(cssmin())
@@ -52,15 +54,15 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./js'));
 });
 
-gulp.task('scss-lint', function() {
-  gulp.src('scss/**/*.scss')
-    .pipe(scsslint());
-});
-
 gulp.task('html', function() {
   gulp.src('./*.html')
     .pipe(gulp.dest('./'))
     .pipe(reload({stream:true}));
+});
+
+gulp.task('scss-lint', function() {
+  gulp.src('scss/**/*.scss')
+  .pipe(scsslint());
 });
 
 gulp.task('jshint', function() {
