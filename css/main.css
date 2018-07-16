@@ -171,7 +171,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: default;
   min-height: 25em;
   padding: 100px 40px;
   -webkit-transition: padding .3s;
