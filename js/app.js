@@ -7,7 +7,7 @@
 
   function createEmailLink(array, anchorId){
     var email = array.join('');
-    document.getElementById(anchorId).href = 'mailto:' + email;
+    document.getElementById(anchorId).href = 'mailto:' + email + '?subject=Reaching Out';
   }
 }());
 
