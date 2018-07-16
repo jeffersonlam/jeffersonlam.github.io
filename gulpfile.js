@@ -7,8 +7,6 @@ var rename = require('gulp-rename');
 var cssmin = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
-var scsslint = require('gulp-scss-lint');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var plumber = require('gulp-plumber');
@@ -60,21 +58,10 @@ gulp.task('html', function() {
     .pipe(reload({stream:true}));
 });
 
-gulp.task('scss-lint', function() {
-  gulp.src('scss/**/*.scss')
-  .pipe(scsslint());
-});
-
-gulp.task('jshint', function() {
-  gulp.src('js/*.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
 gulp.task('watch', function() {
   gulp.watch('scss/**/*.scss', ['scss']);
-  gulp.watch('js/*.js', ['jshint', 'js']);
+  gulp.watch('js/*.js', ['js']);
   gulp.watch('./*.html', ['html']);
 });
 
-gulp.task('default', ['scss-lint', 'browser-sync', 'js', 'scss', 'watch']);
+gulp.task('default', ['browser-sync', 'js', 'scss', 'watch']);
