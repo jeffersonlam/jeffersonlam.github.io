@@ -1,12 +1,11 @@
-//rgb(255,222,89)
-$primary-clr : #FFDE59;
-$secondary-clr : #37A2BC;
+$primary-clr: #FFDE59;
+$secondary-clr: #37A2BC;
 $selection-clr: #5AF;
-$black : #252324;
+$black: #252324;
 $white: #FFF;
 
 $primary-font: 'Helvetica Neue', Helvetica, sans-serif;
-$secondary-font : 'Georgia';
+$secondary-font: 'Georgia';
 
 
 // foundation
@@ -21,7 +20,6 @@ body, html {
 
 a {
   color: inherit;
-  // text-decoration: none;
 
   &:visited {
     color: inherit;
@@ -83,11 +81,6 @@ a {
       color: $white;
       transition: all .3s;
     }
-  }
-
-  h6 {
-    margin-bottom: 15px;
-    text-indent: 20px;
   }
 
   &.alternate {
