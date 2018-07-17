@@ -33,7 +33,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('js/*.js')
+  gulp.src('js/app.js')
     .pipe(uglify())
     .pipe(rename('app.min.js'))
     .pipe(reload({stream:true}))
