@@ -9,24 +9,16 @@ body, html {
 
 section {
   display: flex;
-  display: -webkit-flex;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
   justify-content: center;
   height: 90vh;
   min-height: 30em;
-  // overflow: hidden;
   position: relative;
   text-align: left;
   padding: 100px 40px;
-
   transition: padding .3s;
-  @media (max-width: 600px){
+
+  @media (max-width: 600px) {
     padding: 70px 20px;
   }
 
@@ -56,20 +48,13 @@ section {
 
 footer {
   display: flex;
-  display: -webkit-flex;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
   justify-content: center;
   min-height: 25em;
   padding: 100px 40px;
   transition: padding .3s;
- 
-  @media (max-width: 600px){
+
+  @media (max-width: 600px) {
     padding: 70px 20px;
   }
 
