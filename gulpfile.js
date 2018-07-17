@@ -10,26 +10,13 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
 
 
 gulp.task('scss', function() {
-    var onError = function(err) {
-      notify.onError({
-          title:    'Gulp',
-          subtitle: 'SCSS Compile Error!',
-          message:  '<%= error.message %>',
-          sound:    'Tink'
-      })(err);
-      this.emit('end');
-  };
-
   return gulp.src('scss/main.scss')
-    .pipe(plumber({errorHandler: onError}))
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({browsers: ['last 2 versions']}))
-    .pipe(rename('main.css'))
-    .pipe(gulp.dest('./css'))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
     .pipe(reload({stream:true}))
@@ -40,14 +27,15 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: './'
-        }
+        },
+        open: false
     });
 });
 
 gulp.task('js', function() {
   gulp.src('js/*.js')
     .pipe(uglify())
-    .pipe(rename('all.min.js'))
+    .pipe(rename('app.min.js'))
     .pipe(reload({stream:true}))
     .pipe(gulp.dest('./js'));
 });
