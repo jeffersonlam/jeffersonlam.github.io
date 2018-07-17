@@ -29,14 +29,8 @@ a {
 }
 
 .container {
-  -webkit-animation: body-fade-in .4s .1s forwards;
   animation: body-fade-in .4s .1s forwards;
   opacity: 0;
-}
-
-// hamburger
-.hamburger {
-  background-color: $black;
 }
 
 .highlight-bg {
@@ -53,12 +47,6 @@ a {
   .highlight-bg {
     background-color: $black;
     color: $primary-clr;
-
-    // &:hover{
-      // background-color: $white;
-      // color: $black;
-      // cursor: pointer;
-    // }
   }
 
   &.alternate {
@@ -160,17 +148,17 @@ footer {
   animation-name: body-fade-in;
 }
 
-.logo {
+.diamond {
   border-bottom-color: rgba(90, 90, 90, .8);
 
-  &:after {
+  &::after {
     border-top-color: rgba(130, 130, 130, .8);
   }
 
   &:hover {
     border-bottom-color: rgba(120, 120, 120, .8);
 
-    &:after {
+    &::after {
       border-top-color: rgba(160, 160, 160, .8);
     }
   }
