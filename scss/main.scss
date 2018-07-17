@@ -1,5 +1,13 @@
-@import 'base/index';
-@import 'utilities/index';
-@import 'layout/index';
-@import 'themes/yellow';
-@import 'shame';
+@import
+
+'packages/reset',
+'packages/icomoon',
+
+'base',
+
+'layout',
+
+'modules/hero',
+'modules/footer',
+
+'themes/yellow';
