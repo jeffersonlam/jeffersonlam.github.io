@@ -8,7 +8,7 @@ $primary-font: 'Helvetica Neue', Helvetica, sans-serif;
 $secondary-font: 'Georgia';
 
 
-// foundation
+// base
 ::selection {
   background: $selection-clr;
   color: $white;
@@ -126,18 +126,12 @@ footer {
 }
 
 // animations
-@-webkit-keyframes body-fade-in {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
 @keyframes body-fade-in {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 
 .body-fade-in {
-  -webkit-animation-name: body-fade-in;
   animation-name: body-fade-in;
 }
 
