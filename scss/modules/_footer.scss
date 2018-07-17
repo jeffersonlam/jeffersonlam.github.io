@@ -5,18 +5,26 @@ footer {
 
   .content {
     text-align: center;
+  }
 
-    p {
-      margin: 15px 0;
-    }
+  ul {
+    cursor: default;
 
-    a {
+    li {
       display: inline-block;
     }
+  }
 
-    .icon {
-      font-size: 1.6em;
-      margin: 0 10px;
+  p {
+    margin-top: 20px;
+  }
+
+  .icon {
+    font-size: 1.8em;
+    margin: 0 10px;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
