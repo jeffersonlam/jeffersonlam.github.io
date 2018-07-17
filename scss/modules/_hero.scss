@@ -1,7 +1,8 @@
-.hero .content {
+.hero {
   h1 {
     padding: 5px 0;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
       font-size: 2.5em;
       line-height: 46px;
     }
