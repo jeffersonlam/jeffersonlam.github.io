@@ -13,12 +13,12 @@ section {
   min-height: 30em;
   position: relative;
   text-align: left;
-  padding: 100px 40px;
+  // padding: 70px 20px;
   transition: padding .3s;
 
-  @media (max-width: 600px) {
-    padding: 70px 20px;
-  }
+  // @include respond-to(medium) {
+  //   padding: 100px 40px;
+  // }
 }
 
 footer {
@@ -26,12 +26,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   min-height: 25em;
-  padding: 100px 40px;
   transition: padding .3s;
-
-  @media (max-width: 600px) {
-    padding: 70px 20px;
-  }
 }
 
 .content {
@@ -39,6 +34,12 @@ footer {
   width: 100%;
   max-width: 725px;
   margin: 0 auto;
+  padding: 0 10px;
+  transition: padding .3s;
+
+  @include respond-to(small) {
+    padding: 0 40px;
+  }
 }
 
 .highlight-bg {
