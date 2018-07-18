@@ -5,6 +5,7 @@
 html, body {
   height: 100%;
   -webkit-font-smoothing: subpixel-antialiased;
+  background-color: color(blk);
 }
 
 h1 { font-size: 3em; line-height: 54px; }
@@ -15,3 +16,25 @@ h5 { font-size: 1.4em; }
 h6 { font-size: 1.3em; line-height: 26px; }
 p { font-size: 1.3em; line-height: 26px; }
 p.small { font-size: 1em; }
+
+::selection {
+  background: color(selection);
+  color: color(wht);
+}
+
+a {
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+@keyframes body-fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.body-fade-in {
+  animation-name: body-fade-in;
+}

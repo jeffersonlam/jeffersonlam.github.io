@@ -2,9 +2,26 @@ footer {
   font-weight: 100;
   font-size: 1.1em;
   letter-spacing: 1px;
+  background-color: color(blk);
+  color: color(wht);
+  font-family: font(primary);
 
   .content {
     text-align: center;
+  }
+
+  a {
+    color: color(wht);
+    text-decoration: none;
+    transition: color .1s ease-in-out;
+
+    &:visited {
+      color: color(wht);
+    }
+
+    &:hover {
+      color: color(secondary);
+    }
   }
 
   ul {

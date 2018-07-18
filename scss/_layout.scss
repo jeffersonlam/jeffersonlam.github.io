@@ -1,6 +1,8 @@
 .container {
   height: 100%;
   min-height: 100%;
+  animation: body-fade-in .4s .1s forwards;
+  opacity: 0;
 }
 
 section {

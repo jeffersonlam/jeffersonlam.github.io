@@ -1,0 +1,18 @@
+$colors: (
+  wht: #FFF,
+  blk: #252324,
+  accent: #FFDE59,
+  secondary: #37A2BC,
+  selection: #5AF
+);
+
+$fonts: (
+  primary: ('Helvetica Neue', Helvetica, sans-serif),
+  secondary: 'Georgia'
+);
+
+$breakpoints: (
+  small: 767px,
+  medium: 992px,
+  large: 1200px
+);

@@ -1,10 +1,31 @@
 .hero {
+  background-color: color(accent);
+  color: color(blk);
+  font-family: font(primary);
+  transition: all .3s;
+
   h1 {
     padding: 5px 0;
 
     @media (max-width: 600px) {
       font-size: 2.5em;
       line-height: 46px;
+    }
+  }
+
+  .highlight-bg {
+    background-color: color(blk);
+    color: color(accent);
+    transition: all .3s;
+  }
+
+  &.alternate {
+    background-color: color(blk);
+    color: color(accent);
+
+    .highlight-bg {
+      background-color: color(accent);
+      color: color(blk);
     }
   }
 }

@@ -1,5 +1,36 @@
 .about {
+  background-color: color(wht);
+  background-image: url('../img/texture4.png');
+  background-position: 50%;
+  color: color(blk);
+  font-family: font(secondary);
+  transition: all .3s;
+
   p {
     text-indent: 20px;
+  }
+
+  .highlight-bg {
+    background-color: color(blk);
+    color: color(wht);
+  }
+
+  &.alternate {
+    background-color: color(blk);
+    color: color(wht);
+
+    .highlight-bg {
+      background-color: color(wht);
+      color: color(blk);
+    }
+
+    .portfolio a {
+      border-color: color(wht);
+
+      &:hover {
+        background-color: color(wht);
+        color: color(blk);
+      }
+    }
   }
 }
