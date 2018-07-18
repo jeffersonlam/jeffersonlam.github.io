@@ -16,5 +16,14 @@
       color: color(wht);
       transition: all .3s;
     }
+
+    .is-dark-ui & {
+      border-color: color(wht);
+
+      &:hover {
+        background-color: color(wht);
+        color: color(blk);
+      }
+    }
   }
 }

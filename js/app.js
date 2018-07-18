@@ -12,27 +12,10 @@
 }());
 
 //This code is used live by the DOM
-function toggleColors(){
-  toggleHero();
-  toggleAbout();
-  // toggleFooter();
+function toggleDarkUI(){
+  var elem = document.body;
+  toggleClass(elem, 'is-dark-ui');
 }
-
-function toggleHero(){
-  var elem = document.getElementsByClassName('hero')[0];
-  toggleClass(elem, 'alternate');
-}
-
-function toggleAbout(){
-  var elem = document.getElementsByClassName('about')[0];
-  toggleClass(elem, 'alternate');
-}
-
-// function toggleFooter(){
-//   var elem = document.getElementsByTagName('footer')[0];
-//   console.log(elem);
-//   toggleClass(elem, 'alternate');
-// }
 
 function toggleClass(element, className){
   if (!element || !className){

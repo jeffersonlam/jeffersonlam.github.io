@@ -19,7 +19,7 @@
     transition: all .3s;
   }
 
-  &.alternate {
+  .is-dark-ui & {
     background-color: color(blk);
     color: color(accent);
 

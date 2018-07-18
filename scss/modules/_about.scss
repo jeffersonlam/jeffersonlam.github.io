@@ -15,22 +15,13 @@
     color: color(wht);
   }
 
-  &.alternate {
+  .is-dark-ui & {
     background-color: color(blk);
     color: color(wht);
 
     .highlight-bg {
       background-color: color(wht);
       color: color(blk);
-    }
-
-    .portfolio a {
-      border-color: color(wht);
-
-      &:hover {
-        background-color: color(wht);
-        color: color(blk);
-      }
     }
   }
 }
